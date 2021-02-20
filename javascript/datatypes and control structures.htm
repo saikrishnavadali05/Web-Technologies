@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie ie8"> <![endif]-->
+<!--[if IE 9]><html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html style="" class=" js no-touch csstransforms3d csstransitions gr__tutorialspoint_com"><!--<![endif]--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<!-- Basic -->
+<meta charset="utf-8">
+<title>JavaScript</title>
+<meta name="description" content="JavaScript - Learn Internet Technologies in simple and easy steps starting from Internet Overview, Internet reference Models, Internet Domain Name System, Internet Services, Internet Protocols, E-Mail Overview, E-Mail Operations, Email Providers, Websites Development Overview, Websites Types, Website Publishing, WWW Overview,  Web Browsers , Web Servers, Search Engines etc.">
+<meta name="keywords" content="Internet, Technologies, Tutorial, Beginners, Learn, simple, easy, steps, starting,  Overview , reference, Models, Internet, Domain, Name, System, Internet, Services, Internet, Protocols, E-Mail, Overview, Operations, Providers, Websites, Development, Websites, Types, Website, Publishing, WWW, Overview,  Web, Browsers , Web, Servers, Search, Engines etc.">
+<!-- base href="https://www.tutorialspoint.com/" -->
+<link rel="shortcut icon" href="https://www.tutorialspoint.com/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="471319149685276">
+<meta property="og:site_name" content="www.tutorialspoint.com">
+<meta name="robots" content="index, follow">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="author" content="tutorialspoint.com">
+<script type="text/javascript" src="datatypes%20and%20control%20structures_files/script-min-v4.js"></script>
+<link rel="stylesheet" href="datatypes%20and%20control%20structures_files/style-min.css">
+<!-- Head Libs -->
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="/theme/css/ie8.css">
+<![endif]-->
+<style>
+select{ border:0 !important; outline: 1px inset black !important; outline-offset: -1px !important; }
+ul.nav-list.primary>li a.videolink{    background: none; margin: 0px; padding: 0px; border: 1px solid #d6d6d6;}
+div.feature-box div.feature-box-icon, .col-md-3 .course-box, li.heading, div.footer-copyright { background: #015EAE url(/images/pattern.png) repeat center center !important;}
+.sub-main-menu .sub-menuu div:hover, .sub-main-menu .viewall, header nav ul.nav-main li a:hover, button.btn-responsive-nav, header div.search button.btn-default { background: #015EAE !important;}
+.submenu-item{ border-bottom: 2px solid #015EAE !important; border-top: 2px solid #015EAE !important }
+.ace_scroller{overflow: auto!important;}
+</style>
+<script>
+$(document).ready(function() {
+  $('input[name="q"]').keydown(function(event){
+    if(event.keyCode == 13) {
+      event.preventDefault();
+      return false;
+    }
+  });
+});
+</script>
+</head>
+<body onload="prettyPrint()" data-pinterest-extension-installed="ff1.37.9" data-gr-c-s-loaded="true">
+<div class="wrapLoader">
+   <div class="imgLoader">
+      <img src="datatypes%20and%20control%20structures_files/loading-cg.gif" alt="" width="70" height="70">
+   </div>
+</div>
+<header>
+   <div class="container">			
+      <h1 class="logo">
+      <a href="https://www.tutorialspoint.com/index.htm" title="tutorialspoint">
+      <img alt="tutorialspoint" src="datatypes%20and%20control%20structures_files/logo.png">
+      </a>
+      </h1>			
+      <nav>
+         <ul class="nav nav-pills nav-top">
+            <li><a href="https://www.tutorialspoint.com/about/about_careers.htm" style="background: #fffb09; font-weight: bold;"><i class="icon icon-suitcase"></i> Jobs</a></li>
+            <li> <a href="http://www.sendfiles.net/"><i class="fa fa-send"></i> &nbsp;SENDFiles</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/whiteboard.htm"><img src="datatypes%20and%20control%20structures_files/image-editor.png" alt="Whiteboard" title="Whiteboard"> &nbsp;Whiteboard</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/netmeeting.php"><i class="fa-camera"></i> &nbsp;Net Meeting</a> </li>
+            <li> <a href="https://www.tutorialspoint.com/online_dev_tools.htm"> <i class="dev-tools-menu" style="opacity:.5"></i> Tools </a> </li>
+            <li> <a href="https://www.tutorialspoint.com/articles/index.php"><i class="icon icon-file-text-o"></i> &nbsp;Articles</a> </li>            
+            <li class="top-icons">
+              <ul class="social-icons">
+              <li class="facebook"><a href="https://www.facebook.com/tutorialspointindia" target="_blank" data-placement="bottom" title="tutorialspoint @ Facebook">Facebook</a></li>
+              <li class="googleplus"><a href="https://plus.google.com/u/0/116678774017490391259/posts" target="_blank" data-placement="bottom" title="tutorialspoint @ Google+">Google+</a></li>
+              <li class="twitter"><a href="https://www.twitter.com/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Twitter">Twitter</a></li>
+              <li class="linkedin"><a href="https://www.linkedin.com/company/tutorialspoint" target="_blank" data-placement="bottom" title="tutorialspoint @ Linkedin">Linkedin</a></li>
+              <li class="youtube"><a href="https://www.youtube.com/channel/UCVLbzhxVTiTLiVKeGV7WEBg" target="_blank" data-placement="bottom" title="tutorialspoint YouTube">YouTube</a></li>
+              </ul>
+           </li>
+         </ul>
+      </nav>
+         <!-- search code here  --> 
+      <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse" id="pull" style="top: 11133px!important"> <i class="icon icon-bars"></i> </button>
+   </div>
+  
+   <div class="navbar nav-main">
+      <div class="container">
+         <nav class="nav-main mega-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+               <li class="dropdown no-sub-menu"> <a class="dropdown" href="https://www.tutorialspoint.com/index.htm"><i class="icon icon-home"></i> Home</a> </li>   
+               <li class="dropdown" id="liTL"><a class="dropdown" href="javascript:void(0);"><span class="tut-lib"> Tutorials Library <i class="fa-caret-down"></i></span></a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/codingground.htm"><i class="fa-code"></i> Coding Ground </a> </li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/tutor_connect/index.php"><i class="fa-user"> </i> Tutor Connect</a></li>
+               <li class="dropdown no-sub-menu"><a class="dropdown" href="https://www.tutorialspoint.com/videotutorials/index.htm"><i class="fa-toggle-right"></i> Videos </a></li>
+               <li class="dropdown no-sub-menu">
+                  <div class="searchform-popup">
+                     <input class="header-search-box" id="search-string" name="q" placeholder="Search your favorite tutorials..." onfocus="if (this.value == 'Search your favorite tutorials...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search your favorite tutorials...';}" autocomplete="off" type="text">
+                     <div class="magnifying-glass"><i class="icon-search"></i> Search </div>
+                 </div>
+               </li>
+            </ul>
+         </nav>
+         <div class="submenu-item sub-main-menu" id="top-sub-menu"></div>
+         
+      </div>
+   </div>	
+</header>
+<div style="clear:both;"></div>
+<div role="main" class="main">
+<div class="container">
+<div class="row">
+<div class="col-md-2">
+<aside class="sidebar">
+<div class="mini-logo">
+<img src="datatypes%20and%20control%20structures_files/internet-technologies-mini-logo.jpg" alt="Internet Technologies Tutorial">
+</div>
+<ul class="nav nav-list primary left-menu">
+<li class="heading">Internet Basics</li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/index.htm">Home</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_overview.htm">Internet Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/intranet_overview.htm">Intranet Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/extranet_overview.htm">Extranet  Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_reference_models.htm">Internet reference Models</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_domain_name_system.htm">Internet Domain Name System</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_services.htm">Internet Services</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_connectivity.htm">Internet Connectivity</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_protocols.htm">Internet Protocols</a></li>
+<li class="heading">Electronic Mail Basics</li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/e_mail_overview.htm">E-Mail Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/e_mail_protocols.htm">E-Mail Protocols </a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/e_mail_working.htm">E-Mail Working</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/e_mail_operations.htm">E-Mail Operations</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/e_mail_features.htm">E-mail Features</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/e_mail_etiquettes.htm">E-Mail Etiquettes</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/e_mail_security.htm">E-mail Security</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/e_mail_providers.htm">E-mail Providers</a></li>
+<li class="heading">Website Development</li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/websites_overview.htm">Websites Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/websites_types.htm">Websites Types</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/website_designing.htm">Website Designing</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/websites_development.htm">Websites Development</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/website_publishing.htm">Website Publishing</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/website_url_registration.htm">Website URL Registration</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/website_hosting.htm">Website Hosting</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/website_security.htm">Website Security</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/search_engine_optimization.htm">Search Engine Optimization</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/website_monetization.htm">Website Monetization</a></li>
+<li class="heading">World Wide Web</li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/www_overview.htm">WWW Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/web_pages.htm">Web Pages</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/web_browsers.htm">Web Browsers</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/web_servers.htm">Web Servers</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/proxy_servers.htm">Proxy Servers</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/search_engines.htm">Search Engines</a></li>
+<li class="heading">Internet Collaboration</li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/collaboration_overview.htm">Collaboration Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/mailing_list.htm">Mailing List</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/usenet_newsgroup.htm">Usenet Newsgroup</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/online_education.htm">Online Education</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/social_networking.htm">Social Networking</a></li>
+<li class="heading">Internet Security and Privacy</li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_security_overview.htm">Internet Security Overview</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/data_encryption.htm">Data Encryption</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/digital_signature.htm">Digital Signature</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/firewall_security.htm">Firewall Security</a></li>
+<li class="heading">Internet Web Programming</li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/html.htm">HTML</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/css.htm">CSS </a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/javascript.htm" style="background-color: rgb(214, 214, 214);">JavaScript </a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/php.htm">PHP</a></li>
+<li class="heading">Internet Useful Resources</li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_quick_guide.htm">Internet Quick Guide</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_useful_resources.htm">Internet Useful Resources</a></li>
+<li><a href="https://www.tutorialspoint.com/internet_technologies/internet_discussion.htm">Internet Discussion</a></li>
+</ul>
+<ul class="nav nav-list primary push-bottom left-menu special">
+<li class="sreading">Selected Reading</li>
+<li><a target="_top" href="https://www.tutorialspoint.com/developers_best_practices/index.htm">Developer's Best Practices</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/questions_and_answers.htm">Questions and Answers</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/effective_resume_writing.htm">Effective Resume Writing</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/hr_interview_questions/index.htm">HR Interview Questions</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_glossary.htm">Computer Glossary</a></li>
+<li><a target="_top" href="https://www.tutorialspoint.com/computer_whoiswho.htm">Who is Who</a></li>
+</ul>
+</aside>
+</div>
+<!-- PRINTING STARTS HERE -->
+<div class="row">
+<div class="content">
+<div class="col-md-7 middle-col">
+<h1>JavaScript</h1>
+<div class="topgooglead">
+<hr>
+<div style="padding-bottom:5px;padding-left:10px;">Advertisements</div>
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "image";
+google_ad_channel = "";
+//--></script>
+<script type="text/javascript" src="datatypes%20and%20control%20structures_files/show_ads.js"> 
+</script>
+</div>
+<hr>
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/internet_technologies/css.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/internet_technologies/php.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<div class="clearer"></div>
+<hr>
+<h2>Introduction</h2>
+<p><b>JavaScript</b> is a lightweight, interpreted programming language 
+with object-oriented capabilities that allows you to build interactivity
+ into otherwise static HTML pages.</p>
+<blockquote>JavaScript code is not compiled but translated by the 
+translator. This translator is embedded into the browser and is 
+responsible for translating javascript code.</blockquote>
+<p><b>Key Points</b></p>
+<ul class="list">
+<li><p>It is Lightweight, interpreted programming language.</p></li>
+<li><p>It is designed for creating network-centric applications.</p></li>
+<li><p>It is complementary to and integrated with Java.</p></li>
+<li><p>It is complementary to and integrated with HTML</p></li>
+<li><p>It is an open and cross-platform</p></li>
+</ul>
+<h2>JavaScript Statements</h2>
+<p>JavaScript statements are the commands to tell the browser to what action to perform. Statements are separated by semicolon (;).</p>
+<blockquote>JavaScript statement constitutes the JavaScript code which is translated by the browser line by line.</blockquote>
+<p>Example of JavaScript statement:</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="pln">document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"demo"</span><span class="pun">).</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Welcome"</span><span class="pun">;</span></pre>
+<p>Following table shows the various JavaScript Statements −</p>
+<table class="table table-bordered">
+<tbody><tr>
+<th>Sr.No.</th>
+<th>Statement</th><th>Description</th></tr>
+<tr><td>1.</td><td>switch case</td><td>A block of statements in which 
+execution of code depends upon different cases. The interpreter checks 
+each case against the value of the expression until a match is found. If
+ nothing matches, a <b>default</b> condition will be used.</td></tr>
+<tr><td>2.</td><td>If  else</td><td>The <b>if</b> statement is the fundamental control statement that allows JavaScript to make decisions and execute statements conditionally.</td></tr>
+<tr><td>3.</td><td>While</td><td>The purpose of a while loop is to 
+execute a statement or code block repeatedly as long as expression is 
+true. Once expression becomes false, the loop will be exited.</td></tr>
+<tr><td>4.</td><td>do while</td><td>Block of statements that are executed at least once and continues to be executed while condition is true.</td></tr>
+<tr><td>5.</td><td>for</td><td>Same as while  but initialization, condition and increment/decrement is done in the same line.</td></tr>
+<tr><td>6.</td><td>for in</td><td>This loop is used to loop through an object's properties.</td></tr>
+<tr><td>7.</td><td>continue</td><td>The continue statement tells the interpreter to immediately start the next iteration of the loop and skip remaining code block.</td></tr>
+<tr><td>8.</td><td>break</td><td>The break statement is used to exit a loop early, breaking out of the enclosing curly braces.</td></tr>
+<tr><td>9.</td><td>function</td><td>A function is a group of reusable 
+code which can be called anywhere in your programme. The keyword 
+function is used to declare a function.</td></tr>
+<tr><td>10.</td><td>return</td><td>Return statement is used to return a value from a function.</td></tr>
+<tr><td>11.</td><td>var</td><td>Used to declare a variable.</td></tr>
+<tr><td>12.</td><td>try</td><td>A block of statements on which error handling is implemented.</td></tr>
+<tr><td>13.</td><td>catch</td><td>A block of statements that are executed when an error occur.</td></tr>
+<tr><td>14.</td><td>throw</td><td>Used to throw an error.</td></tr>
+</tbody></table>
+<h2>JavaScript Comments</h2>
+<p>JavaScript supports both C-style and C++-style comments, thus:</p>
+<ul class="list">
+<li><p>Any text between a // and the end of a line is treated as a comment and is ignored by JavaScript.</p></li>
+
+<li><p>Any text between the characters /* and */ is treated as a comment. This may span multiple lines.</p></li>
+<li><p>JavaScript also recognizes the HTML comment opening sequence 
+&lt;!--. JavaScript treats this as a single-line comment, just as it 
+does the // comment.--&gt;</p></li>
+<li><p>The HTML comment closing sequence --&gt; is not recognized by JavaScript so it should be written as //--&gt;.</p></li>
+
+</ul>
+<p>Example</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">language</span><span class="pun">=</span><span class="atv">"javascript"</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="com">&lt;!--
+
+// this is a comment. It is similar to comments in C++
+
+/*
+ * This is a multiline comment in JavaScript
+ * It is very similar to comments in C Programming
+ */
+//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;script&gt;</span></pre>
+<h2>JavaScript variable</h2>
+<p>Variables are referred as named containers for storing information. 
+We can place data into these containers and then refer to the data 
+simply by naming the container.</p>
+<h3>Rules to declare variable in JavaScript</h3>
+<p>Here are the important rules that must be followed while declaring a variable in JavaScript.</p>
+<ul class="list">
+<li><p>In JavaScript variable names are case sensitive i.e. a is different from A.</p></li>
+<li><p>Variable name can only be started with a underscore ( _ ) or a letter (from a to z or A to Z), or dollar ( $ ) sign.</p></li>
+<li><p>Numbers (0 to 9) can only be used after a letter.</p></li>
+<li><p>No other special character is allowed in variable name.</p></li>
+</ul>
+<p>Before you use a variable in a JavaScript program, you must declare it. Variables are declared with the var keyword as follows −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="pun">&lt;!--</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> money</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> name</span><span class="pun">,</span><span class="pln"> age</span><span class="pun">;</span><span class="pln">
+</span><span class="com">//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></pre>
+<p>Variables can be initialized at time of declaration or after declaration as follows −</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="pun">&lt;!--</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Ali"</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> money</span><span class="pun">;</span><span class="pln">
+money </span><span class="pun">=</span><span class="pln"> </span><span class="lit">2000.50</span><span class="pun">;</span><span class="pln">
+</span><span class="com">//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></pre>
+<h2>Javascript Data Type</h2>
+<p>There are two kinds of data types as mentioned below −</p>
+<ul class="list">
+<li><p>Primitive Data Type</p></li>
+<li><p>Non Primitive Data Type</p></li>
+</ul>
+<p>The following table describes <b>Primitive Data Types</b> available in javaScript</p>
+<table class="table table-bordered">
+<tbody><tr><th>Sr.No.</th><th>Datatype Description</th></tr>
+<tr><td>1.</td><td><b>String</b><p>Can contain groups of character as single value. It is represented in double quotes.E.g. var x= “tutorial”.</p></td></tr>
+<tr><td>2.</td><td><b>Numbers</b><p>Contains the numbers with or without decimal. E.g.  var x=44, y=44.56;</p></td></tr>
+<tr><td>3.</td><td><b>Booleans</b><p>Contain only two values either true or false. E.g. var x=true, y= false.</p></td></tr>
+<tr><td>4.</td><td><b>Undefined</b><p>Variable with no value is called Undefined. E.g. var x;</p></td></tr>
+<tr><td>5.</td><td><b>Null</b><p>If we assign null to a variable, it becomes empty. E.g. var x=null;</p></td></tr>
+</tbody></table>
+<p>The following table describes <b>Non-Primitive Data Types</b> in javaScript</p>
+<table class="table table-bordered">
+<tbody><tr><th>Sr.No.</th><th>Datatype Description</th></tr>
+<tr><td>1.</td><td><b>Array</b><br>Can contain groups of values of same type.  E.g. var x={1,2,3,55};</td></tr>
+<tr><td>2.</td><td><b>Objects</b><br>Objects are stored in property and value pair. E.g.  var rectangle = { length: 5, breadth: 3};
+</td></tr>
+</tbody></table>
+<h2>JavaScript Functions</h2>
+<p>Function is a group of reusable statements (Code) that can be called 
+any where in a program. In javascript function keyword is used to 
+declare or define a function. </p>
+<p><b>Key Points</b></p>
+<ul class="list">
+<li><p>To define a function  use function keyword followed by functionname, followed by parentheses ().</p></li>
+<li><p>In parenthesis, we define parameters or attributes.</p></li>
+<li><p>The group of reusabe statements (code) is enclosed in curly braces {}. This code is executed whenever function is called.</p></li>
+</ul>
+<p><b>Syntax</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">function</span><span class="pln"> functionname </span><span class="pun">(</span><span class="pln">p1</span><span class="pun">,</span><span class="pln"> p2</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+ </span><span class="kwd">function</span><span class="pln"> coding</span><span class="pun">…</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<h2>JavaScript Operators</h2>
+<p>Operators are used to perform operation on one, two or more operands.
+ Operator is represented by a symbol such as +, =, *, % etc.  Following 
+are the operators supported by javascript −</p>
+<ul class="list">
+<li><p>Arithmetic Operators</p></li>
+<li><p>Comparison Operators</p></li>
+<li><p>Logical (or Relational) Operators</p></li>
+<li><p>Assignment Operators</p></li>
+<li><p>Conditional (or ternary) Operators</p></li>
+<li><p>Arithmetic Operators</p></li>
+</ul>
+<h3>Arithmatic Operators</h3>
+<p>Following table shows all the arithmetic operators supported by javascript −</p>
+<table class="table table-bordered">
+<tbody><tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+<tr><td>+</td><td>Add two operands.</td><td>10 + 10 will give 20</td></tr>
+<tr><td>-</td><td>Subtract second operand from the first.</td><td>10 – 10 will give 0</td></tr>
+<tr><td>*</td><td>Multiply two operands.</td><td>10 * 30 will give 300</td></tr>
+<tr><td>/</td><td>Divide numerator by denominator</td><td>10/10 will give 1</td></tr>
+<tr><td>%</td><td>It is called modulus operator and gives remainder of the division.</td><td>10 % 10 will give 0</td></tr>
+<tr><td>++</td><td>Increment operator, increases integer value by one</td><td>10 ++ will give 11</td></tr>
+<tr><td>--</td><td>Decrement operator, decreases integer value by one</td><td>10 – will give 9</td></tr>
+</tbody></table>
+<h3>Comparison Operators</h3>
+<p>Following table shows all the comparison operators supported by javascript −</p>
+<table class="table table-bordered">
+<tbody><tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+<tr><td>==</td><td>Checks if values of two operands are equal or not, If yes then condition becomes true.</td><td>10 == 10 will give true</td></tr>
+<tr><td>!=</td><td><b>Not Equal to operator</b><br>Checks if the value of two operands is equal or not, if values are not equal then condition becomes true.</td><td>10 !=10 will give false</td></tr>
+<tr><td>&gt;</td><td><b>Greater Than operator</b><br>Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true.
+</td><td>20 &gt; 10 will give true</td></tr>
+<tr><td>&lt;</td><td><b>Less than operator</b><br> Checks if the value of left operand is less than the value of right operand, if yes then condition becomes true.</td><td>10 &lt; 20 will give true</td></tr>
+<tr><td>&gt;=</td><td><b>Greater than or equal to operator</b><br>Checks if the value of left operand is greater than or equal to the value of right operand, if yes then condition becomes true.
+</td><td>10 &gt;=20 will give false</td></tr>
+<tr><td>&lt;=</td><td><b>Less than or equal to operator</b><br>Checks if the value of left operand is less than or equal to the value of right operand, if yes then condition becomes true.
+</td><td>10 &lt;=20 will give true.</td></tr>
+</tbody></table>
+<h3>Logical Operators</h3>
+<p>Following table shows all the logical operators supported by javascript −</p>
+<table class="table table-bordered">
+<tbody><tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+<tr><td>&amp;&amp;</td><td>Logical <b>AND</b> operator returns true if both operands are non zero.</td><td>10 &amp;&amp; 10 will give true.</td></tr>
+<tr><td>||</td><td>Logical <b>OR</b> operator returns true If any of the operand is non zero</td><td>10 || 0 will give true.</td></tr>
+<tr><td>!</td><td>Logical <b>NOT</b> operator complements the logical state of its operand.</td><td>! (10 &amp;&amp; 10) will give false.</td></tr>
+</tbody></table>
+<h3>Assignment Operators</h3>
+<p>Following table shows all the assignment operators supported by javascript −</p>
+<table class="table table-bordered">
+<tbody><tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+<tr><td>=</td><td><b>Simple Assignment operator</b><br>Assigns values from right side operands to left side operand.</td><td>C = A + B will assign value of A + B into C</td></tr>
+<tr><td>+=</td><td><b>Add AND assignment operator</b><br>It adds right operand to the left operand and assign the result to left operand</td><td>C += A is equivalent to C = C + A</td></tr>
+<tr><td>-=</td><td><b>Subtract AND assignment operator</b><br>It subtracts right operand from the left operand and assign the result to left operand</td><td>C -= A is equivalent to C = C - A</td></tr>
+<tr><td>*=</td><td><b>Multiply AND assignment operator</b><br>It multiplies right operand with the left operand and assign the result to left operand</td><td>C *= A is equivalent to C = C * A</td></tr>
+<tr><td>/=</td><td><b>Divide AND assignment operator</b><br>It divides left operand with the right operand and assign the result to left operand</td><td>C /= A is equivalent to C = C / A</td></tr>
+<tr><td>%=</td><td><b>Modulus AND assignment operator</b><br>Modulus AND assignment operator, It takes modulus using two operands and assign the result to left operand</td><td>C %= A is equivalent to C = C % A</td></tr>
+</tbody></table>
+<h3>Conditional Operator</h3>
+<p>It is also called ternary operator, since it has three operands.</p>
+<table class="table table-bordered">
+<tbody><tr><th>Operator</th><th>Description</th><th>Example</th></tr>
+<tr><td>?:</td><td>Conditional Expression</td><td>If Condition is true? Then value X : Otherwise value Y</td></tr>
+</tbody></table>
+<h2>Control Structure</h2>
+<p>Control structure actually controls the flow of execution of a 
+program. Following are the several control structure supported by 
+javascript.</p>
+<ul class="list">
+<li><p>if … else</p></li>
+<li><p>switch case</p></li>
+<li><p>do while loop</p></li>
+<li><p>while loop</p></li>
+<li><p>for loop</p></li>
+</ul>
+<h3>If … else</h3>
+<p>The if statement is the fundamental control statement that allows 
+JavaScript to make decisions and execute statements conditionally.</p>
+<p><b>Syntax</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">expression</span><span class="pun">){</span><span class="pln">
+   </span><span class="typ">Statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln"> to be executed </span><span class="kwd">if</span><span class="pln"> expression </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="pun">&lt;!--</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">20</span><span class="pun">;</span><span class="pln">
+</span><span class="kwd">if</span><span class="pun">(</span><span class="pln"> age </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">18</span><span class="pln"> </span><span class="pun">){</span><span class="pln">
+   document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"&lt;b&gt;Qualifies for driving&lt;/b&gt;"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="com">//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></pre>
+<h3>Switch case</h3>
+<p>The basic syntax of the switch statement is to give an expression to 
+evaluate and several different statements to execute based on the value 
+of the expression. The interpreter checks each case against the value of
+ the expression until a match is found. If nothing matches, a default 
+condition will be used.</p>
+<p><b>Syntax</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">switch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">expression</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">case</span><span class="pln"> condition </span><span class="lit">1</span><span class="pun">:</span><span class="pln"> statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln">
+                    </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">case</span><span class="pln"> condition </span><span class="lit">2</span><span class="pun">:</span><span class="pln"> statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln">
+                    </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+   </span><span class="pun">...</span><span class="pln">
+  </span><span class="kwd">case</span><span class="pln"> condition n</span><span class="pun">:</span><span class="pln"> statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln">
+                    </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">default</span><span class="pun">:</span><span class="pln"> statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="pun">&lt;!--</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> grade</span><span class="pun">=</span><span class="str">'A'</span><span class="pun">;</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Entering switch block&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">switch</span><span class="pln"> </span><span class="pun">(</span><span class="pln">grade</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">{</span><span class="pln">
+  </span><span class="kwd">case</span><span class="pln"> </span><span class="str">'A'</span><span class="pun">:</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Good job&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+            </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">case</span><span class="pln"> </span><span class="str">'B'</span><span class="pun">:</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Pretty good&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+            </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">case</span><span class="pln"> </span><span class="str">'C'</span><span class="pun">:</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Passed&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+            </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">case</span><span class="pln"> </span><span class="str">'D'</span><span class="pun">:</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Not so good&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+            </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">case</span><span class="pln"> </span><span class="str">'F'</span><span class="pun">:</span><span class="pln"> document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Failed&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+            </span><span class="kwd">break</span><span class="pun">;</span><span class="pln">
+  </span><span class="kwd">default</span><span class="pun">:</span><span class="pln">  document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Unknown grade&lt;br/&gt;"</span><span class="pun">)</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Exiting switch block"</span><span class="pun">);</span><span class="pln">
+</span><span class="com">//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></pre>
+<h3>Do while Loop</h3>
+<p>The do...while loop is similar to the while loop except that the 
+condition check happens at the end of the loop. This means that the loop
+ will always be executed at least once, even if the condition is false.</p>
+<p><b>Syntax</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">do</span><span class="pun">{</span><span class="pln">
+   </span><span class="typ">Statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln"> to be executed</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">expression</span><span class="pun">);</span></pre>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="pun">&lt;!--</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> count </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Starting Loop"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">"&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">do</span><span class="pun">{</span><span class="pln">
+  document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Current Count : "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> count </span><span class="pun">+</span><span class="pln"> </span><span class="str">"&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+  count</span><span class="pun">++;</span><span class="pln">
+</span><span class="pun">}</span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">count </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">);</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Loop stopped!"</span><span class="pun">);</span><span class="pln">
+</span><span class="com">//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></pre>
+<p>This will produce following result −</p>
+<pre class="result notranslate">Starting Loop
+Current Count : 0
+Loop stopped! 
+</pre>
+<h3>While Loop</h3>
+<p>The purpose of a while loop is to execute a statement or code block 
+repeatedly as long as expression is true. Once expression becomes false,
+ the loop will be exited.</p>
+<p><b>Syntax</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">expression</span><span class="pun">){</span><span class="pln">
+   </span><span class="typ">Statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln"> to be executed </span><span class="kwd">if</span><span class="pln"> expression </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p><b>Example</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="pun">&lt;!--</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> count </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Starting Loop"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">"&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">count </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">10</span><span class="pun">){</span><span class="pln">
+  document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Current Count : "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> count </span><span class="pun">+</span><span class="pln"> </span><span class="str">"&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+  count</span><span class="pun">++;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Loop stopped!"</span><span class="pun">);</span><span class="pln">
+</span><span class="com">//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></pre>
+<p>This will produce following result −</p>
+<pre class="result notranslate">Starting Loop
+Current Count : 0
+Current Count : 1
+Current Count : 2
+Current Count : 3
+Current Count : 4
+Current Count : 5
+Current Count : 6
+Current Count : 7
+Current Count : 8
+Current Count : 9
+Loop stopped! 
+</pre>
+<h3>For Loop</h3>
+<p>The for loop is the most compact form of looping and includes the following three important parts −</p>
+<ul class="list">
+<li><p>The loop initialization where we initialize our counter to a 
+starting value. The initialization statement is executed before the loop
+ begins.</p></li>
+<li><p>The test statement which will test if the given condition is true
+ or not. If condition is true then code given inside the loop will be 
+executed otherwise loop will come out.</p></li>
+<li><p>The iteration statement where you can increase or decrease your counter.</p></li>
+</ul>
+<p><b>Syntax</b></p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="pln">initialization</span><span class="pun">;</span><span class="pln"> test condition</span><span class="pun">;</span><span class="pln"> iteration statement</span><span class="pun">){</span><span class="pln">
+   </span><span class="typ">Statement</span><span class="pun">(</span><span class="pln">s</span><span class="pun">)</span><span class="pln"> to be executed </span><span class="kwd">if</span><span class="pln"> test condition </span><span class="kwd">is</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">
+</span><span class="pun">}</span></pre>
+<p>Example</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;script</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"</span><span class="tag">&gt;</span><span class="pln">
+</span><span class="pun">&lt;!--</span><span class="pln">
+</span><span class="kwd">var</span><span class="pln"> count</span><span class="pun">;</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Starting Loop"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">"&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+</span><span class="kwd">for</span><span class="pun">(</span><span class="pln">count </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> count </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">10</span><span class="pun">;</span><span class="pln"> count</span><span class="pun">++){</span><span class="pln">
+  document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Current Count : "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> count </span><span class="pun">);</span><span class="pln">
+  document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"&lt;br/&gt;"</span><span class="pun">);</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+document</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="str">"Loop stopped!"</span><span class="pun">);</span><span class="pln">
+</span><span class="com">//--&gt;</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></pre>
+<p>This will produce following result which is similar to while loop −</p>
+<pre class="result notranslate">Starting Loop
+Current Count : 0
+Current Count : 1
+Current Count : 2
+Current Count : 3
+Current Count : 4
+Current Count : 5
+Current Count : 6
+Current Count : 7
+Current Count : 8
+Current Count : 9
+Loop stopped! 
+</pre>
+<h2>Creating Sample Program</h2>
+<p>Following is the sample program that shows time, when we click in button.</p>
+<pre class="prettyprint notranslate prettyprinted" style=""><span class="tag">&lt;html&gt;</span><span class="pln">
+</span><span class="tag">&lt;body&gt;</span><span class="pln">
+</span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="kwd">this</span><span class="pun">.</span><span class="pln">innerHTML</span><span class="pun">=</span><span class="typ">Date</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">The time is?</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;p&gt;</span><span class="pln">Click to display the date.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+</span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">onclick</span><span class="pun">=</span><span class="atv">"</span><span class="pln">displayDate</span><span class="pun">()</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">The time is?</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;script&gt;</span><span class="pln">
+</span><span class="kwd">function</span><span class="pln"> displayDate</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">"demo"</span><span class="pun">).</span><span class="pln">innerHTML </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Date</span><span class="pun">();</span><span class="pln">
+</span><span class="pun">}</span><span class="tag">&lt;/script&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"demo"</span><span class="tag">&gt;&lt;/p&gt;</span><span class="pln">
+
+</span><span class="tag">&lt;/body&gt;</span><span class="pln">
+</span><span class="tag">&lt;/html&gt;</span></pre>
+<p><b>Output</b></p>
+<img src="datatypes%20and%20control%20structures_files/internet-js_sample_program.jpg" alt="internet_technologies_tutorial">
+<hr>
+<div class="pre-btn">
+<a href="https://www.tutorialspoint.com/internet_technologies/css.htm"><i class="icon icon-arrow-circle-o-left big-font"></i> Previous Page</a>
+</div>
+<div class="print-btn center">
+<a href="https://www.tutorialspoint.com/cgi-bin/printpage.cgi" target="_blank"><i class="icon icon-print big-font"></i> Print</a>
+</div>
+<div class="pdf-btn">
+<a href="https://www.tutorialspoint.com/internet_technologies/pdf/javascript.pdf" title="JavaScript" target="_blank"><i class="icon icon-file-pdf-o big-font"></i> PDF</a>
+</div>
+<div class="nxt-btn">
+<a href="https://www.tutorialspoint.com/internet_technologies/php.htm">Next Page <i class="icon icon-arrow-circle-o-right big-font"></i>&nbsp;</a>
+</div>
+<hr>
+<!-- PRINTING ENDS HERE -->
+<div class="bottomgooglead">
+<div class="bottomadtag">Advertisements</div>
+<script type="text/javascript"><!--
+var width = 580;
+var height = 400;
+var format = "580x400_as";
+if( window.innerWidth < 468 ){
+   width = 300;
+   height = 250;
+   format = "300x250_as";
+}
+google_ad_client = "pub-7133395778201029";
+google_ad_width = width;
+google_ad_height = height;
+google_ad_format = format;
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="datatypes%20and%20control%20structures_files/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-3" id="rightbar">
+<div class="simple-ad">
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.facebook.com/sharer.php?u=' + 'http://www.tutorialspoint.com/internet_technologies/javascript.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="datatypes%20and%20control%20structures_files/facebookIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://twitter.com/share?url=' + 'http://www.tutorialspoint.com/internet_technologies/javascript.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="datatypes%20and%20control%20structures_files/twitterIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.linkedin.com/cws/share?url=' + 'http://www.tutorialspoint.com/internet_technologies/javascript.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="datatypes%20and%20control%20structures_files/linkedinIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://plus.google.com/share?url=http://www.tutorialspoint.com/internet_technologies/javascript.htm','sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="datatypes%20and%20control%20structures_files/googlePlusIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://www.stumbleupon.com/submit?url=http://www.tutorialspoint.com/internet_technologies/javascript.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=456,top='+sTop+',left='+sLeft);return false;">
+<img src="datatypes%20and%20control%20structures_files/StumbleUponIcon.jpg" alt="img">
+</a>
+<a href="javascript:void(0)" onclick="var sTop = window.screen.height/2-(218); var sLeft = window.screen.width/2-(313);window.open('https://reddit.com/submit?url=http://www.tutorialspoint.com/internet_technologies/javascript.htm&amp;title='+ document.title,'sharer','toolbar=0,status=0,width=626,height=656,top='+sTop+',left='+sLeft);return false;">
+<img src="datatypes%20and%20control%20structures_files/reddit.jpg" alt="img">
+</a>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 250;
+google_ad_format = "300x250_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="datatypes%20and%20control%20structures_files/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "pub-7133395778201029";
+google_ad_width = 300;
+google_ad_height = 600;
+google_ad_format = "300x600_as";
+google_ad_type = "image";
+google_ad_channel ="";
+//--></script>
+<script type="text/javascript" src="datatypes%20and%20control%20structures_files/show_ads.js">
+</script>
+</div>
+<div class="rightgooglead">
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2537027957187252";
+/* Right Side Ad */
+google_ad_slot = "right_side_ad";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="datatypes%20and%20control%20structures_files/show_ads.js">
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="footer-copyright">
+<div class="container">
+<div class="row">
+<div class="col-md-1">
+<a href="https://www.tutorialspoint.com/index.htm" class="logo"> <img alt="Tutorials Point" class="img-responsive" src="datatypes%20and%20control%20structures_files/logo-footer.png"> </a>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <nav id="sub-menu">
+      <ul>
+         <li><a href="https://www.tutorialspoint.com/about/tutorials_writing.htm">Write for us</a></li>
+         <li><a href="https://www.tutorialspoint.com/about/faq.htm">FAQ's</a></li>
+         <li><a href="https://www.tutorialspoint.com/about/about_helping.htm">Helping</a></li>
+         <li><a href="https://www.tutorialspoint.com/about/contact_us.htm">Contact</a></li>
+      </ul>
+   </nav>
+</div>
+<div class="col-md-3 col-sm-12 col-xs-12">
+<p>© Copyright 2017. All Rights Reserved.</p>
+</div>
+<div class="col-md-4 col-sm-12 col-xs-12">
+   <div class="news-group">
+      <input class="form-control-foot search" name="textemail" id="textemail" autocomplete="off" placeholder="Enter email for newsletter" onfocus="if (this.value == 'Enter email for newsletter...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Enter email for newsletter...';}" type="text">
+      <span class="input-group-btn"> <button class="btn btn-default btn-footer" id="btnemail" type="submit" onclick="javascript:void(0);">go</button> </span>
+      <div id="newsresponse"></div>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Libs -->
+<script type="text/javascript" src="datatypes%20and%20control%20structures_files/custom-min.js"></script><a class="scroll-to-top visible" href="#" id="scrollToTop"><i class="icon icon-chevron-up icon-white"></i></a>
+<script src="datatypes%20and%20control%20structures_files/urchin.js">
+</script>
+<script type="text/javascript">
+_uacct = "UA-232293-6";
+urchinTracker();
+$('.pg-icon').click(function(){
+   $('.wrapLoader').show();
+});
+</script>
+
+
+
+<div class="autocomplete-suggestions "></div><span style="border-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font: bold 11px/20px &quot;Helvetica Neue&quot;,Helvetica,sans-serif; color: rgb(255, 255, 255); background: rgb(189, 8, 28) url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMzBweCIgd2lkdGg9IjMwcHgiIHZpZXdCb3g9Ii0xIC0xIDMxIDMxIj48Zz48cGF0aCBkPSJNMjkuNDQ5LDE0LjY2MiBDMjkuNDQ5LDIyLjcyMiAyMi44NjgsMjkuMjU2IDE0Ljc1LDI5LjI1NiBDNi42MzIsMjkuMjU2IDAuMDUxLDIyLjcyMiAwLjA1MSwxNC42NjIgQzAuMDUxLDYuNjAxIDYuNjMyLDAuMDY3IDE0Ljc1LDAuMDY3IEMyMi44NjgsMC4wNjcgMjkuNDQ5LDYuNjAxIDI5LjQ0OSwxNC42NjIiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PHBhdGggZD0iTTE0LjczMywxLjY4NiBDNy41MTYsMS42ODYgMS42NjUsNy40OTUgMS42NjUsMTQuNjYyIEMxLjY2NSwyMC4xNTkgNS4xMDksMjQuODU0IDkuOTcsMjYuNzQ0IEM5Ljg1NiwyNS43MTggOS43NTMsMjQuMTQzIDEwLjAxNiwyMy4wMjIgQzEwLjI1MywyMi4wMSAxMS41NDgsMTYuNTcyIDExLjU0OCwxNi41NzIgQzExLjU0OCwxNi41NzIgMTEuMTU3LDE1Ljc5NSAxMS4xNTcsMTQuNjQ2IEMxMS4xNTcsMTIuODQyIDEyLjIxMSwxMS40OTUgMTMuNTIyLDExLjQ5NSBDMTQuNjM3LDExLjQ5NSAxNS4xNzUsMTIuMzI2IDE1LjE3NSwxMy4zMjMgQzE1LjE3NSwxNC40MzYgMTQuNDYyLDE2LjEgMTQuMDkzLDE3LjY0MyBDMTMuNzg1LDE4LjkzNSAxNC43NDUsMTkuOTg4IDE2LjAyOCwxOS45ODggQzE4LjM1MSwxOS45ODggMjAuMTM2LDE3LjU1NiAyMC4xMzYsMTQuMDQ2IEMyMC4xMzYsMTAuOTM5IDE3Ljg4OCw4Ljc2NyAxNC42NzgsOC43NjcgQzEwLjk1OSw4Ljc2NyA4Ljc3NywxMS41MzYgOC43NzcsMTQuMzk4IEM4Ljc3NywxNS41MTMgOS4yMSwxNi43MDkgOS43NDksMTcuMzU5IEM5Ljg1NiwxNy40ODggOS44NzIsMTcuNiA5Ljg0LDE3LjczMSBDOS43NDEsMTguMTQxIDkuNTIsMTkuMDIzIDkuNDc3LDE5LjIwMyBDOS40MiwxOS40NCA5LjI4OCwxOS40OTEgOS4wNCwxOS4zNzYgQzcuNDA4LDE4LjYyMiA2LjM4NywxNi4yNTIgNi4zODcsMTQuMzQ5IEM2LjM4NywxMC4yNTYgOS4zODMsNi40OTcgMTUuMDIyLDYuNDk3IEMxOS41NTUsNi40OTcgMjMuMDc4LDkuNzA1IDIzLjA3OCwxMy45OTEgQzIzLjA3OCwxOC40NjMgMjAuMjM5LDIyLjA2MiAxNi4yOTcsMjIuMDYyIEMxNC45NzMsMjIuMDYyIDEzLjcyOCwyMS4zNzkgMTMuMzAyLDIwLjU3MiBDMTMuMzAyLDIwLjU3MiAxMi42NDcsMjMuMDUgMTIuNDg4LDIzLjY1NyBDMTIuMTkzLDI0Ljc4NCAxMS4zOTYsMjYuMTk2IDEwLjg2MywyNy4wNTggQzEyLjA4NiwyNy40MzQgMTMuMzg2LDI3LjYzNyAxNC43MzMsMjcuNjM3IEMyMS45NSwyNy42MzcgMjcuODAxLDIxLjgyOCAyNy44MDEsMTQuNjYyIEMyNy44MDEsNy40OTUgMjEuOTUsMS42ODYgMTQuNzMzLDEuNjg2IiBmaWxsPSIjYmQwODFjIj48L3BhdGg+PC9nPjwvc3ZnPg==&quot;) no-repeat scroll 3px 50% / 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; border: medium none; top: 11551px; left: 373px;">Save</span></body></html>
